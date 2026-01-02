@@ -1,0 +1,38 @@
+# Core Data Pipeline
+psycopg2-binary==2.9.9
+sqlalchemy==2.0.23
+sqlalchemy-utils==0.41.1
+
+# API
+requests==2.31.0
+Flask==3.0.0
+python-dotenv==1.0.0
+
+# Airflow
+apache-airflow==2.7.3
+apache-airflow-providers-docker==3.7.1
+apache-airflow-providers-postgres==5.10.0
+
+# Data Quality
+soda-core==3.0.47
+soda-core-postgres==3.0.47
+
+# dbt
+dbt-postgres==1.7.0
+dbt-dotenv==0.5.3
+
+# Logging & Utilities
+tenacity==8.2.3
+python-json-logger==2.0.7
+pydantic==2.5.0
+pytz==2023.3
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-mock==3.12.0
+
+# Code Quality (Optional)
+black==23.12.0
+pylint==3.0.3
+mypy==1.7.1

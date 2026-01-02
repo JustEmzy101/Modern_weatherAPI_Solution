@@ -1,0 +1,37 @@
+checks for raw_weather_data:
+  # Row-level checks
+  - row_count > 0:
+      name: Table should have data
+  
+  - duplicate_count(id) = 0:
+      name: No duplicate IDs allowed
+  
+  # Completeness - Critical fields
+  - missing_count(id) = 0:
+      name: ID must not be null
+  
+  - missing_count(city) = 0:
+      name: City must not be null
+  
+  - missing_count(temp) = 0:
+      name: Temperature must not be null
+      
+  - missing_count(wind_speed) = 0:
+      name: Wind speed must not be null
+  
+  # Value validity
+  - invalid_count(temp) = 0:
+      valid min: -100
+      valid max: 60
+      name: Temperature must be in valid range
+
+  - invalid_count(wind_speed) = 0:
+      valid min: 0
+      valid max: 500
+      name: Wind speed must be non-negative and realistic
+
+  # Data freshness
+  - freshness(inserted_at):
+      fail: when > 2h
+      name: Data freshness within 2 hours
+      

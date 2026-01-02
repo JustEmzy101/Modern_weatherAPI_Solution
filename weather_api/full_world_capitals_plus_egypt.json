@@ -1,0 +1,800 @@
+{
+  "Cairo": {
+    "country": "Egypt",
+    "region": "Cairo Governorate",
+    "lat": "30.044",
+    "lon": "31.235",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Giza": {
+    "country": "Egypt",
+    "region": "Giza Governorate",
+    "lat": "30.013",
+    "lon": "31.208",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Alexandria": {
+    "country": "Egypt",
+    "region": "Alexandria Governorate",
+    "lat": "31.201",
+    "lon": "29.918",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Banha": {
+    "country": "Egypt",
+    "region": "Qalyubia Governorate",
+    "lat": "30.466",
+    "lon": "31.184",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Tanta": {
+    "country": "Egypt",
+    "region": "Gharbia Governorate",
+    "lat": "30.786",
+    "lon": "31.000",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Damanhur": {
+    "country": "Egypt",
+    "region": "Beheira Governorate",
+    "lat": "31.040",
+    "lon": "30.469",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Mansoura": {
+    "country": "Egypt",
+    "region": "Dakahlia Governorate",
+    "lat": "31.042",
+    "lon": "31.378",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Zagazig": {
+    "country": "Egypt",
+    "region": "Sharqia Governorate",
+    "lat": "30.587",
+    "lon": "31.502",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Ismailia": {
+    "country": "Egypt",
+    "region": "Ismailia Governorate",
+    "lat": "30.596",
+    "lon": "32.271",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Suez": {
+    "country": "Egypt",
+    "region": "Suez Governorate",
+    "lat": "29.966",
+    "lon": "32.549",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Port Said": {
+    "country": "Egypt",
+    "region": "Port Said Governorate",
+    "lat": "31.256",
+    "lon": "32.285",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Arish": {
+    "country": "Egypt",
+    "region": "North Sinai Governorate",
+    "lat": "31.132",
+    "lon": "33.798",
+    "timezone_id": "Africa/Cairo"
+  },
+  "El Tor": {
+    "country": "Egypt",
+    "region": "South Sinai Governorate",
+    "lat": "28.241",
+    "lon": "33.622",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Faiyum": {
+    "country": "Egypt",
+    "region": "Faiyum Governorate",
+    "lat": "29.308",
+    "lon": "30.843",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Beni Suef": {
+    "country": "Egypt",
+    "region": "Beni Suef Governorate",
+    "lat": "29.074",
+    "lon": "31.099",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Minya": {
+    "country": "Egypt",
+    "region": "Minya Governorate",
+    "lat": "28.109",
+    "lon": "30.750",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Asyut": {
+    "country": "Egypt",
+    "region": "Asyut Governorate",
+    "lat": "27.186",
+    "lon": "31.168",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Sohag": {
+    "country": "Egypt",
+    "region": "Sohag Governorate",
+    "lat": "26.556",
+    "lon": "31.694",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Qena": {
+    "country": "Egypt",
+    "region": "Qena Governorate",
+    "lat": "26.164",
+    "lon": "32.726",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Luxor": {
+    "country": "Egypt",
+    "region": "Luxor Governorate",
+    "lat": "25.687",
+    "lon": "32.639",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Aswan": {
+    "country": "Egypt",
+    "region": "Aswan Governorate",
+    "lat": "24.088",
+    "lon": "32.899",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Kharga": {
+    "country": "Egypt",
+    "region": "New Valley Governorate",
+    "lat": "25.451",
+    "lon": "30.546",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Hurghada": {
+    "country": "Egypt",
+    "region": "Red Sea Governorate",
+    "lat": "27.257",
+    "lon": "33.812",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Marsa Matruh": {
+    "country": "Egypt",
+    "region": "Matrouh Governorate",
+    "lat": "31.354",
+    "lon": "27.237",
+    "timezone_id": "Africa/Cairo"
+  },
+  "Kabul": {
+    "country": "Afghanistan",
+    "region": "Kabul Province",
+    "lat": "34.556",
+    "lon": "69.207",
+    "timezone_id": "Asia/Kabul"
+  },
+  "Tirana": {
+    "country": "Albania",
+    "region": "Tirana County",
+    "lat": "41.327",
+    "lon": "19.819",
+    "timezone_id": "Europe/Tirane"
+  },
+  "Algiers": {
+    "country": "Algeria",
+    "region": "Algiers Province",
+    "lat": "36.753",
+    "lon": "3.058",
+    "timezone_id": "Africa/Algiers"
+  },
+  "Andorra la Vella": {
+    "country": "Andorra",
+    "region": "Andorra la Vella",
+    "lat": "42.507",
+    "lon": "1.521",
+    "timezone_id": "Europe/Andorra"
+  },
+  "Luanda": {
+    "country": "Angola",
+    "region": "Luanda Province",
+    "lat": "-8.839",
+    "lon": "13.289",
+    "timezone_id": "Africa/Luanda"
+  },
+  "Buenos Aires": {
+    "country": "Argentina",
+    "region": "Buenos Aires",
+    "lat": "-34.603",
+    "lon": "-58.381",
+    "timezone_id": "America/Argentina/Buenos_Aires"
+  },
+  "Yerevan": {
+    "country": "Armenia",
+    "region": "Yerevan",
+    "lat": "40.187",
+    "lon": "44.515",
+    "timezone_id": "Asia/Yerevan"
+  },
+  "Canberra": {
+    "country": "Australia",
+    "region": "Australian Capital Territory",
+    "lat": "-35.280",
+    "lon": "149.130",
+    "timezone_id": "Australia/Sydney"
+  },
+  "Vienna": {
+    "country": "Austria",
+    "region": "Vienna",
+    "lat": "48.208",
+    "lon": "16.373",
+    "timezone_id": "Europe/Vienna"
+  },
+  "Baku": {
+    "country": "Azerbaijan",
+    "region": "Baku",
+    "lat": "40.409",
+    "lon": "49.867",
+    "timezone_id": "Asia/Baku"
+  },
+  "Manama": {
+    "country": "Bahrain",
+    "region": "Capital Governorate",
+    "lat": "26.228",
+    "lon": "50.586",
+    "timezone_id": "Asia/Bahrain"
+  },
+  "Dhaka": {
+    "country": "Bangladesh",
+    "region": "Dhaka Division",
+    "lat": "23.810",
+    "lon": "90.412",
+    "timezone_id": "Asia/Dhaka"
+  },
+  "Brussels": {
+    "country": "Belgium",
+    "region": "Brussels-Capital Region",
+    "lat": "50.850",
+    "lon": "4.351",
+    "timezone_id": "Europe/Brussels"
+  },
+  "La Paz": {
+    "country": "Bolivia",
+    "region": "La Paz Department",
+    "lat": "-16.489",
+    "lon": "-68.119",
+    "timezone_id": "America/La_Paz"
+  },
+  "Sucre": {
+    "country": "Bolivia",
+    "region": "Chuquisaca Department",
+    "lat": "-19.019",
+    "lon": "-65.261",
+    "timezone_id": "America/La_Paz"
+  },
+  "Brasília": {
+    "country": "Brazil",
+    "region": "Federal District",
+    "lat": "-15.793",
+    "lon": "-47.882",
+    "timezone_id": "America/Sao_Paulo"
+  },
+  "Sofia": {
+    "country": "Bulgaria",
+    "region": "Sofia City",
+    "lat": "42.697",
+    "lon": "23.321",
+    "timezone_id": "Europe/Sofia"
+  },
+  "Ottawa": {
+    "country": "Canada",
+    "region": "Ontario",
+    "lat": "45.421",
+    "lon": "-75.697",
+    "timezone_id": "America/Toronto"
+  },
+  "Beijing": {
+    "country": "China",
+    "region": "Beijing Municipality",
+    "lat": "39.904",
+    "lon": "116.407",
+    "timezone_id": "Asia/Shanghai"
+  },
+  "Bogotá": {
+    "country": "Colombia",
+    "region": "Capital District",
+    "lat": "4.711",
+    "lon": "-74.072",
+    "timezone_id": "America/Bogota"
+  },
+  "San José": {
+    "country": "Costa Rica",
+    "region": "San José Province",
+    "lat": "9.928",
+    "lon": "-84.090",
+    "timezone_id": "America/Costa_Rica"
+  },
+  "Havana": {
+    "country": "Cuba",
+    "region": "Havana",
+    "lat": "23.113",
+    "lon": "-82.366",
+    "timezone_id": "America/Havana"
+  },
+  "Prague": {
+    "country": "Czech Republic",
+    "region": "Prague",
+    "lat": "50.075",
+    "lon": "14.438",
+    "timezone_id": "Europe/Prague"
+  },
+  "Copenhagen": {
+    "country": "Denmark",
+    "region": "Capital Region",
+    "lat": "55.676",
+    "lon": "12.568",
+    "timezone_id": "Europe/Copenhagen"
+  },
+  "Quito": {
+    "country": "Ecuador",
+    "region": "Pichincha",
+    "lat": "-0.181",
+    "lon": "-78.467",
+    "timezone_id": "America/Guayaquil"
+  },
+  "Helsinki": {
+    "country": "Finland",
+    "region": "Uusimaa",
+    "lat": "60.169",
+    "lon": "24.938",
+    "timezone_id": "Europe/Helsinki"
+  },
+  "Paris": {
+    "country": "France",
+    "region": "Île-de-France",
+    "lat": "48.857",
+    "lon": "2.352",
+    "timezone_id": "Europe/Paris"
+  },
+  "Berlin": {
+    "country": "Germany",
+    "region": "Berlin",
+    "lat": "52.520",
+    "lon": "13.405",
+    "timezone_id": "Europe/Berlin"
+  },
+  "Athens": {
+    "country": "Greece",
+    "region": "Attica",
+    "lat": "37.984",
+    "lon": "23.728",
+    "timezone_id": "Europe/Athens"
+  },
+  "Budapest": {
+    "country": "Hungary",
+    "region": "Central Hungary",
+    "lat": "47.497",
+    "lon": "19.040",
+    "timezone_id": "Europe/Budapest"
+  },
+  "Reykjavík": {
+    "country": "Iceland",
+    "region": "Capital Region",
+    "lat": "64.147",
+    "lon": "-21.943",
+    "timezone_id": "Atlantic/Reykjavik"
+  },
+  "New Delhi": {
+    "country": "India",
+    "region": "Delhi",
+    "lat": "28.613",
+    "lon": "77.209",
+    "timezone_id": "Asia/Kolkata"
+  },
+  "Jakarta": {
+    "country": "Indonesia",
+    "region": "Jakarta",
+    "lat": "-6.208",
+    "lon": "106.845",
+    "timezone_id": "Asia/Jakarta"
+  },
+  "Tehran": {
+    "country": "Iran",
+    "region": "Tehran Province",
+    "lat": "35.689",
+    "lon": "51.389",
+    "timezone_id": "Asia/Tehran"
+  },
+  "Baghdad": {
+    "country": "Iraq",
+    "region": "Baghdad Governorate",
+    "lat": "33.315",
+    "lon": "44.366",
+    "timezone_id": "Asia/Baghdad"
+  },
+  "Dublin": {
+    "country": "Ireland",
+    "region": "Leinster",
+    "lat": "53.349",
+    "lon": "-6.260",
+    "timezone_id": "Europe/Dublin"
+  },
+  "Jerusalem": {
+    "country": "Israel",
+    "region": "Jerusalem District",
+    "lat": "31.768",
+    "lon": "35.214",
+    "timezone_id": "Asia/Jerusalem"
+  },
+  "Rome": {
+    "country": "Italy",
+    "region": "Lazio",
+    "lat": "41.902",
+    "lon": "12.496",
+    "timezone_id": "Europe/Rome"
+  },
+  "Tokyo": {
+    "country": "Japan",
+    "region": "Tokyo",
+    "lat": "35.689",
+    "lon": "139.692",
+    "timezone_id": "Asia/Tokyo"
+  },
+  "Amman": {
+    "country": "Jordan",
+    "region": "Amman Governorate",
+    "lat": "31.953",
+    "lon": "35.910",
+    "timezone_id": "Asia/Amman"
+  },
+  "Nairobi": {
+    "country": "Kenya",
+    "region": "Nairobi County",
+    "lat": "-1.286",
+    "lon": "36.817",
+    "timezone_id": "Africa/Nairobi"
+  },
+  "Seoul": {
+    "country": "South Korea",
+    "region": "Seoul",
+    "lat": "37.566",
+    "lon": "126.978",
+    "timezone_id": "Asia/Seoul"
+  },
+  "Kuwait City": {
+    "country": "Kuwait",
+    "region": "Al Asimah",
+    "lat": "29.375",
+    "lon": "47.977",
+    "timezone_id": "Asia/Kuwait"
+  },
+  "Beirut": {
+    "country": "Lebanon",
+    "region": "Beirut Governorate",
+    "lat": "33.894",
+    "lon": "35.502",
+    "timezone_id": "Asia/Beirut"
+  },
+  "Tripoli": {
+    "country": "Libya",
+    "region": "Tripoli District",
+    "lat": "32.887",
+    "lon": "13.191",
+    "timezone_id": "Africa/Tripoli"
+  },
+  "Luxembourg": {
+    "country": "Luxembourg",
+    "region": "Luxembourg District",
+    "lat": "49.611",
+    "lon": "6.131",
+    "timezone_id": "Europe/Luxembourg"
+  },
+  "Rabat": {
+    "country": "Morocco",
+    "region": "Rabat-Salé-Kénitra",
+    "lat": "34.020",
+    "lon": "-6.841",
+    "timezone_id": "Africa/Casablanca"
+  },
+  "Mexico City": {
+    "country": "Mexico",
+    "region": "Mexico City",
+    "lat": "19.432",
+    "lon": "-99.133",
+    "timezone_id": "America/Mexico_City"
+  },
+  "Monaco": {
+    "country": "Monaco",
+    "region": "Monaco",
+    "lat": "43.738",
+    "lon": "7.424",
+    "timezone_id": "Europe/Monaco"
+  },
+  "Ulaanbaatar": {
+    "country": "Mongolia",
+    "region": "Ulaanbaatar",
+    "lat": "47.886",
+    "lon": "106.905",
+    "timezone_id": "Asia/Ulaanbaatar"
+  },
+  "Podgorica": {
+    "country": "Montenegro",
+    "region": "Podgorica Municipality",
+    "lat": "42.430",
+    "lon": "19.259",
+    "timezone_id": "Europe/Podgorica"
+  },
+  "Amsterdam": {
+    "country": "Netherlands",
+    "region": "North Holland",
+    "lat": "52.367",
+    "lon": "4.904",
+    "timezone_id": "Europe/Amsterdam"
+  },
+  "Wellington": {
+    "country": "New Zealand",
+    "region": "Wellington Region",
+    "lat": "-41.287",
+    "lon": "174.776",
+    "timezone_id": "Pacific/Auckland"
+  },
+  "Oslo": {
+    "country": "Norway",
+    "region": "Oslo",
+    "lat": "59.913",
+    "lon": "10.752",
+    "timezone_id": "Europe/Oslo"
+  },
+  "Muscat": {
+    "country": "Oman",
+    "region": "Muscat Governorate",
+    "lat": "23.585",
+    "lon": "58.405",
+    "timezone_id": "Asia/Muscat"
+  },
+  "Islamabad": {
+    "country": "Pakistan",
+    "region": "Islamabad Capital Territory",
+    "lat": "33.684",
+    "lon": "73.047",
+    "timezone_id": "Asia/Karachi"
+  },
+  "Panama City": {
+    "country": "Panama",
+    "region": "Panamá Province",
+    "lat": "8.983",
+    "lon": "-79.517",
+    "timezone_id": "America/Panama"
+  },
+  "Lima": {
+    "country": "Peru",
+    "region": "Lima Province",
+    "lat": "-12.046",
+    "lon": "-77.042",
+    "timezone_id": "America/Lima"
+  },
+  "Manila": {
+    "country": "Philippines",
+    "region": "Metro Manila",
+    "lat": "14.599",
+    "lon": "120.984",
+    "timezone_id": "Asia/Manila"
+  },
+  "Warsaw": {
+    "country": "Poland",
+    "region": "Masovian Voivodeship",
+    "lat": "52.229",
+    "lon": "21.012",
+    "timezone_id": "Europe/Warsaw"
+  },
+  "Lisbon": {
+    "country": "Portugal",
+    "region": "Lisbon District",
+    "lat": "38.722",
+    "lon": "-9.139",
+    "timezone_id": "Europe/Lisbon"
+  },
+  "Doha": {
+    "country": "Qatar",
+    "region": "Doha Municipality",
+    "lat": "25.285",
+    "lon": "51.531",
+    "timezone_id": "Asia/Qatar"
+  },
+  "Bucharest": {
+    "country": "Romania",
+    "region": "Bucharest",
+    "lat": "44.426",
+    "lon": "26.102",
+    "timezone_id": "Europe/Bucharest"
+  },
+  "Moscow": {
+    "country": "Russia",
+    "region": "Moscow",
+    "lat": "55.756",
+    "lon": "37.617",
+    "timezone_id": "Europe/Moscow"
+  },
+  "Riyadh": {
+    "country": "Saudi Arabia",
+    "region": "Riyadh Province",
+    "lat": "24.713",
+    "lon": "46.675",
+    "timezone_id": "Asia/Riyadh"
+  },
+  "Singapore": {
+    "country": "Singapore",
+    "region": "Central Region",
+    "lat": "1.352",
+    "lon": "103.819",
+    "timezone_id": "Asia/Singapore"
+  },
+  "Bratislava": {
+    "country": "Slovakia",
+    "region": "Bratislava Region",
+    "lat": "48.148",
+    "lon": "17.107",
+    "timezone_id": "Europe/Bratislava"
+  },
+  "Ljubljana": {
+    "country": "Slovenia",
+    "region": "Central Slovenia",
+    "lat": "46.056",
+    "lon": "14.505",
+    "timezone_id": "Europe/Ljubljana"
+  },
+  "Pretoria": {
+    "country": "South Africa",
+    "region": "Gauteng",
+    "lat": "-25.747",
+    "lon": "28.229",
+    "timezone_id": "Africa/Johannesburg"
+  },
+  "Cape Town": {
+    "country": "South Africa",
+    "region": "Western Cape",
+    "lat": "-33.924",
+    "lon": "18.424",
+    "timezone_id": "Africa/Johannesburg"
+  },
+  "Bloemfontein": {
+    "country": "South Africa",
+    "region": "Free State",
+    "lat": "-29.085",
+    "lon": "26.159",
+    "timezone_id": "Africa/Johannesburg"
+  },
+  "Madrid": {
+    "country": "Spain",
+    "region": "Community of Madrid",
+    "lat": "40.416",
+    "lon": "-3.703",
+    "timezone_id": "Europe/Madrid"
+  },
+  "Khartoum": {
+    "country": "Sudan",
+    "region": "Khartoum State",
+    "lat": "15.500",
+    "lon": "32.560",
+    "timezone_id": "Africa/Khartoum"
+  },
+  "Stockholm": {
+    "country": "Sweden",
+    "region": "Stockholm County",
+    "lat": "59.329",
+    "lon": "18.068",
+    "timezone_id": "Europe/Stockholm"
+  },
+  "Bern": {
+    "country": "Switzerland",
+    "region": "Canton of Bern",
+    "lat": "46.948",
+    "lon": "7.447",
+    "timezone_id": "Europe/Zurich"
+  },
+  "Damascus": {
+    "country": "Syria",
+    "region": "Damascus Governorate",
+    "lat": "33.514",
+    "lon": "36.277",
+    "timezone_id": "Asia/Damascus"
+  },
+  "Bangkok": {
+    "country": "Thailand",
+    "region": "Bangkok",
+    "lat": "13.756",
+    "lon": "100.501",
+    "timezone_id": "Asia/Bangkok"
+  },
+  "Tunis": {
+    "country": "Tunisia",
+    "region": "Tunis Governorate",
+    "lat": "36.807",
+    "lon": "10.182",
+    "timezone_id": "Africa/Tunis"
+  },
+  "Ankara": {
+    "country": "Turkey",
+    "region": "Ankara Province",
+    "lat": "39.933",
+    "lon": "32.860",
+    "timezone_id": "Europe/Istanbul"
+  },
+  "Kyiv": {
+    "country": "Ukraine",
+    "region": "Kyiv City",
+    "lat": "50.450",
+    "lon": "30.523",
+    "timezone_id": "Europe/Kyiv"
+  },
+  "Abu Dhabi": {
+    "country": "United Arab Emirates",
+    "region": "Abu Dhabi Emirate",
+    "lat": "24.453",
+    "lon": "54.377",
+    "timezone_id": "Asia/Dubai"
+  },
+  "London": {
+    "country": "United Kingdom",
+    "region": "Greater London",
+    "lat": "51.507",
+    "lon": "-0.128",
+    "timezone_id": "Europe/London"
+  },
+  "Washington, D.C.": {
+    "country": "United States of America",
+    "region": "District of Columbia",
+    "lat": "38.907",
+    "lon": "-77.037",
+    "timezone_id": "America/New_York"
+  },
+  "Montevideo": {
+    "country": "Uruguay",
+    "region": "Montevideo Department",
+    "lat": "-34.901",
+    "lon": "-56.164",
+    "timezone_id": "America/Montevideo"
+  },
+  "Vatican City": {
+    "country": "Vatican City",
+    "region": "Vatican City",
+    "lat": "41.902",
+    "lon": "12.453",
+    "timezone_id": "Europe/Vatican"
+  },
+  "Caracas": {
+    "country": "Venezuela",
+    "region": "Capital District",
+    "lat": "10.480",
+    "lon": "-66.903",
+    "timezone_id": "America/Caracas"
+  },
+  "Hanoi": {
+    "country": "Vietnam",
+    "region": "Hanoi Municipality",
+    "lat": "21.028",
+    "lon": "105.834",
+    "timezone_id": "Asia/Bangkok"
+  },
+  "Sana'a": {
+    "country": "Yemen",
+    "region": "Sana'a Governorate",
+    "lat": "15.369",
+    "lon": "44.191",
+    "timezone_id": "Asia/Aden"
+  },
+  "Lusaka": {
+    "country": "Zambia",
+    "region": "Lusaka Province",
+    "lat": "-15.387",
+    "lon": "28.322",
+    "timezone_id": "Africa/Lusaka"
+  },
+  "Harare": {
+    "country": "Zimbabwe",
+    "region": "Harare Province",
+    "lat": "-17.825",
+    "lon": "31.034",
+    "timezone_id": "Africa/Harare"
+  }
+}

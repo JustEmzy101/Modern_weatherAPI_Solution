@@ -1,0 +1,12 @@
+my_project:
+  outputs:
+    dev:
+      dbname: "{{ env_var('DBT_DB_NAME', 'weather_db') }}"
+      host: "{{ env_var('DBT_DB_HOST', 'db') }}"
+      pass: "{{ env_var('DBT_DB_PASSWORD') }}"
+      port: "{{ env_var('DBT_DB_PORT', '5432') | as_number }}"
+      schema: "{{ env_var('DBT_SCHEMA', 'dev') }}"
+      threads: 4
+      type: postgres
+      user: "{{ env_var('DBT_DB_USER', 'weather_user') }}"
+  target: dev

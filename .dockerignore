@@ -1,0 +1,54 @@
+# Root .dockerignore - Speeds up builds by excluding unnecessary files
+
+# Version Control
+.git
+.gitignore
+.gitattributes
+
+# Documentation (not needed in images)
+*.md
+docs/
+.github/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.Python
+*.egg
+.pytest_cache/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Environment
+.env
+.env.local
+*.bak
+
+# Database data (for dev volumes)
+postgres/data/
+
+# Build artifacts
+.dockerignore
+Dockerfile
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs (keep small)
+*.log
+logs/
+
+# Temporary files
+tmp/
+temp/

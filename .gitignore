@@ -1,0 +1,47 @@
+# Environment variables and secrets
+.env
+.env.local
+.env.*.local
+docker/.env
+api_request/.env
+
+# API keys and credentials (if committed separately)
+api_keys_config.json
+secrets.json
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+.venv/
+venv/
+ENV/
+
+# dbt
+target/
+dbt_packages/
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Airflow
+airflow/logs/
+airflow/plugins/
+
+# Database
+postgres/data/
+
+# Docker
+docker-compose.override.yml

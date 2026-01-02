@@ -1,0 +1,240 @@
+x-superset-user: &superset-user root
+x-superset-volumes: &superset-volumes
+  # /app/pythonpath_docker will be appended to the PYTHONPATH in the final container
+  - ./docker:/app/docker
+  # - ./superset:/app/superset
+  - ./superset-core:/app/superset-core
+  - ./docker/superset_config.py:/app/pythonpath/superset_config.py
+
+
+services:
+  db:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: ${DB_USER:-weather_user}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: ${DB_NAME:-weather_db}
+    volumes:
+      - ./postgres/data:/var/lib/postgresql/data
+      - ./postgres/airflow_init.sql:/docker-entrypoint-initdb.d/airflow_init.sql
+      - ./postgres/superset_init.sql:/docker-entrypoint-initdb.d/superset_init.sql
+    ports:
+      - "5430:5432"
+    networks:
+      - my-network
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U weather_user"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 2G
+        reservations:
+          cpus: '1'
+          memory: 1G
+    
+      
+  weather-api:
+    container_name: weather-api
+    build: ./weather_api
+    image: weather-api:latest
+    ports:
+      - "5000:5000"
+    networks:
+      - my-network
+    restart: unless-stopped
+    volumes:
+      - ./weather_api/api_keys_config.json:/app/api_keys_config.json:ro
+    environment:
+      API_KEY: ${WEATHER_API_KEY}
+      CAPITALS_JSON_PATH: ${CAPITALS_JSON_PATH:-/app/full_world_capitals_plus_egypt.json}
+      API_KEYS_CONFIG: ${API_KEYS_CONFIG:-/app/api_keys_config.json}
+      PYTHONUNBUFFERED: 1
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 1G
+  af:
+    container_name: airflow
+    image: apache/airflow:3.1.3
+    ports:
+      - "8080:8080"
+    environment:
+      AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://${AIRFLOW_DB_USER:-airflow}:${AIRFLOW_DB_PASSWORD}@db:5432/${AIRFLOW_DB_NAME:-airflow_db}
+      AIRFLOW__WEBSERVER__LOAD_EXAMPLES: "false"
+      AIRFLOW_ADMIN_PASSWORD: ${AIRFLOW_ADMIN_PASSWORD}
+      AIRFLOW__CORE__AUTH_MANAGER: airflow.api_fastapi.auth.managers.simple.simple_auth_manager.SimpleAuthManager
+      AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_USERS: admin:ADMIN
+      AIRFLOW__CORE__SIMPLE_AUTH_MANAGER_ALL_ADMINS: "false"
+      PYTHONPATH: /opt/airflow/include:${PYTHONPATH}
+      PROJECT_ROOT: ${PROJECT_ROOT:-/opt/airflow/project}
+      HOST_PROJECT_ROOT: ${HOST_PROJECT_ROOT}
+      DB_USER: ${DB_USER:-weather_user}
+      DB_PASSWORD: ${DB_PASSWORD}
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: ${DB_NAME:-weather_db}
+      WEATHER_API_KEY: ${WEATHER_API_KEY}
+    volumes:
+      - ./airflow/dags:/opt/airflow/dags
+      - ./api_request:/opt/airflow/include
+      - ./setup_auth.sh:/opt/airflow/setup_auth.sh
+      - ./dbt:/opt/airflow/project/dbt
+      - ./init_airflow.py:/opt/airflow/init_airflow.py
+      - /var/run/docker.sock:/var/run/docker.sock
+    group_add:
+      - '1001'  
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - my-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
+    command: >
+      bash -c "
+        airflow db migrate &&
+        bash /opt/airflow/setup_auth.sh &&
+        airflow api-server & airflow scheduler
+      "
+  dbt:
+    container_name: dbt
+    build:
+      context: ./dbt
+      dockerfile: Dockerfile
+    volumes:
+      - ./dbt/my_project:/usr/app
+      - ./dbt:/root/.dbt
+      - ./.env:/usr/app/.env:ro
+    working_dir: /usr/app
+    environment:
+      DBT_DB_NAME: ${DB_NAME:-weather_db}
+      DBT_DB_HOST: ${DB_HOST:-db}
+      DBT_DB_USER: ${DB_USER:-weather_user}
+      DBT_DB_PASSWORD: ${DB_PASSWORD}
+      DBT_DB_PORT: ${DB_PORT:-5432}
+      DBT_SCHEMA: ${DBT_SCHEMA:-dev}
+    depends_on:
+      db:
+        condition: service_healthy
+    networks:
+      - my-network
+    command: sh -c "tail -f /dev/null"
+
+#######################################################
+################ APACHE SUPERSET ######################
+#######################################################
+  redis:
+    image: redis:7
+    container_name: superset_cache
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:6379:6379"
+    volumes:
+      - redis:/data
+    networks:
+      - my-network
+
+  superset-init:
+    image: apache/superset:3.0.0-py310
+    container_name: superset_init
+    command: ["/app/docker/docker-init.sh"]
+    env_file:
+      - path: docker/.env # default
+        required: true
+    depends_on:
+      db:
+        condition: service_started
+      redis:
+        condition: service_started
+    user: *superset-user
+    volumes: *superset-volumes
+    environment:
+      # SUPERSET__SQLALCHEMY_EXAMPLES_URI: "no"
+      DATABASE_DB: "superset_db"
+    healthcheck:
+      disable: true
+    networks:
+      - my-network
+
+  superset:
+    env_file:
+      - path: docker/.env # default
+        required: true
+    image: apache/superset:3.0.0-py310
+
+    container_name: superset_app
+    command: ["/app/docker/docker-bootstrap.sh", "app"]
+    restart: unless-stopped
+    ports:
+      - 8088:8088
+
+    user: *superset-user
+    depends_on:
+      superset-init:
+        condition: service_completed_successfully
+    volumes: *superset-volumes
+    environment:
+      # SUPERSET__SQLALCHEMY_EXAMPLES_URI: "no"
+      DATABASE_DB: "superset_db"
+    networks:
+      - my-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8088/superset/welcome/"]
+      interval: 30s
+      timeout: 10s
+      retries: 5
+      start_period: 60s
+    deploy:
+      resources:
+        limits:
+          cpus: '2'
+          memory: 4G
+        reservations:
+          cpus: '1'
+          memory: 2G
+
+#######################################################
+##################### SODA CORE #######################
+#######################################################
+
+  soda-core:
+    image: justemzy101/soda-core:v2
+    container_name: soda-core
+    volumes:
+      - ./soda:/app/soda  # Mount your Soda configuration
+      # - ./dags:/app/dags  # Share with Airflow if needed
+    environment:
+      - DB_USER=${DB_USER:-weather_user}
+      - DB_PASSWORD=${DB_PASSWORD}
+      - DB_HOST=db
+      - DB_PORT=5432
+      - DB_NAME=${DB_NAME:-weather_db}
+    networks:
+      - my-network
+    command: tail -F /dev/null  # Keep container running
+
+networks:
+  my-network:
+    driver: bridge
+
+volumes:
+  redis:
+    external: False

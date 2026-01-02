@@ -1,0 +1,44 @@
+# Base image with Python
+FROM python:3.11-slim
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_NO_CACHE_DIR=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    SODA_VERSION=3
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y --no-install-recommends 
+
+# Create soda user (non-root)
+RUN groupadd -r soda && useradd -r -g soda soda
+
+# Create working directories
+RUN mkdir -p /app/soda /app/logs /app/results && \
+    chown -R soda:soda /app
+
+WORKDIR /app
+
+# Install Soda Core with multiple database connectors
+RUN pip install --no-cache-dir \
+    soda-core==3.* \
+    soda-core-postgres==3.* \
+    soda-core-snowflake==3.* \
+    soda-core-redshift==3.*
+
+
+# Copy entrypoint script
+COPY entrypoint.sh /app/entrypoint.sh
+RUN chmod +x /app/entrypoint.sh
+
+# Switch to non-root user
+USER soda
+
+# Verify installation
+RUN soda --version && \
+    echo "Soda Core installation verified!"
+
+# Default command
+ENTRYPOINT ["entrypoint.sh"]
+CMD ["--help"]
